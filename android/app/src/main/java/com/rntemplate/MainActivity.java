@@ -2,7 +2,13 @@ package com.rntemplate;
 
 import com.facebook.react.ReactActivity;
 
-// import com.myapp.imagepicker.*; // import the package
+// import the package
+import com.facebook.react.ReactPackage;
+import com.facebook.react.shell.MainReactPackage;
+import com.rntemplate.imagepicker.*; // import the package
+
+import java.util.Arrays;
+import java.util.List;
 
 public class MainActivity extends ReactActivity {
 
@@ -15,11 +21,6 @@ public class MainActivity extends ReactActivity {
         return "rntemplate";
     }
 
-    // @Override
-    // protected List<ReactPackage> getPackages() {
-    //     return Arrays.<ReactPackage>asList(
-    //         new MainReactPackage(),
-    //         new ImagePickerPackage() // include it in getPackages
-    //     );
-    // }
+    // this is to include
+
 }

@@ -9,15 +9,20 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
-  View
+  View, 
+  NativeModules,
+  TouchableOpacity
 } from 'react-native';
 
 export default class rntemplate extends Component {
+
+  
+
   render() {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
-          Welcome to React Native!
+          testing changes 
         </Text>
         <Text style={styles.instructions}>
           To get started, edit index.android.js
@@ -26,6 +31,18 @@ export default class rntemplate extends Component {
           Double tap R on your keyboard to reload,{'\n'}
           Shake or press menu button for dev menu
         </Text>
+        <TouchableOpacity onPress={() => {
+          console.log("NATIVE MDULES");
+          console.log(NativeModules.ImagePicker);
+          console.log(NativeModules);
+          NativeModules.ImagePicker.openSelectDialog(
+            {}, // no config yet 
+            (uri) => { console.log(uri) }, 
+            (error) => { console.log(error) }
+          )
+        }}>
+          <Text>{'Test Image Picker'}</Text>
+        </TouchableOpacity>
       </View>
     );
   }
